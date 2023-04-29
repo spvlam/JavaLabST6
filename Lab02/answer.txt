@@ -1,0 +1,2 @@
+If i create a constructor method to build DVD by title, then create a constructor methos to build a DVD by category
+Java do not allow to do this, because both of them share the same signature 
