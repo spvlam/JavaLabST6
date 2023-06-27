@@ -1,3 +1,8 @@
+package main;
+
+import cart.Cart;
+import media.DigitalVideoDisc;
+
 public class Aims{
     public static void main(String[] args) {
        //Create a new cart

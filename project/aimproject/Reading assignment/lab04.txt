@@ -1,0 +1,15 @@
+1: Which classes are aggregates of other classes?
+The CompactDisc class aggregates Track objects.
+The Store class aggregates Media objects.
+The Cart class aggregates Media objects.
+2:Suppose we are taking the Comparable interface approach:
+The class whose objects need to be compared should implement the Comparable interface.
+In the implementing class, the compareTo() method should be implemented to reflect the desired ordering.
+This method should compare the relevant fields of the objects and return a negative integer if the current instance is less than the other,
+0 if they are equal, and a positive integer if the current instance is greater than the other.
+With the Comparable interface approach, we can only have one ordering rule for the items. The compareTo() method defines the single way of comparing objects.
+To accommodate a different ordering rule for DVDs compared to other media types (by title, then decreasing length, then cost),
+ we can introduce a conditional statement within the compareTo() method of the DVD class. 
+This statement would check the type of the other object being compared and apply the specific ordering logic for DVDs, 
+considering title, decreasing length, and cost. 
+This way, the comparison and ordering can be customized for DVDs while maintaining the standard behavior for other media types.

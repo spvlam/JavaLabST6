@@ -1,3 +1,7 @@
+package store;
+
+import media.DigitalVideoDisc;
+
 public class Store {
     private int Max=20;
     private DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[Max] ;

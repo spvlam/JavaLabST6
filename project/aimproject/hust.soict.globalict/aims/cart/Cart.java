@@ -1,3 +1,7 @@
+package cart;
+
+import media.DigitalVideoDisc;
+
 public class Cart{
     private static final int MAX_NUMBER_ORDER =20; 
     private int qtyOrder=0;
@@ -89,6 +93,15 @@ public class Cart{
         }
         return totalCost;
     }
+    public float totalCost(){
+        float totalCost=0;
+        for(DigitalVideoDisc dvd:listOfProduct){
+            if(dvd!=null){
+                totalCost+=dvd.getCost();
+            }
+        }
+        return totalCost;
+    }
     public void list(DigitalVideoDisc []listOfProduct1){
         System.out.println("***********************CART***********************");
         for(DigitalVideoDisc dvd:listOfProduct1){
@@ -97,6 +110,17 @@ public class Cart{
             }
         }
         System.out.printf("total cost : %f\n",totalCost(listOfProduct1));
+        System.out.println("**************************************************");
+
+    }
+     public void list(){
+        System.out.println("***********************CART***********************");
+        for(DigitalVideoDisc dvd:listOfProduct){
+            if(dvd!=null){
+                System.out.printf("DVD-%20s %20s %20s %.2f %.2f\n",dvd.getTitle(), dvd.getCategory(),dvd.getDirector(),dvd.getCost(),dvd.getLength());
+            }
+        }
+        System.out.printf("total cost : %f\n",totalCost(listOfProduct));
         System.out.println("**************************************************");
 
     }
